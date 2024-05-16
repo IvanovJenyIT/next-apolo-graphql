@@ -1,0 +1,10 @@
+schema: ${NEXT_PUBLIC_REACT_APP_SERVER_URL:"http://localhost:4000/graphql"}
+documents: src/schema/**/*.graphql
+include: src/app/**/*.tsx
+extensions:
+  codegen:
+    generates:
+      ./src/__generated__/:
+        plugins:
+          - typescript
+          - typescript-operations
